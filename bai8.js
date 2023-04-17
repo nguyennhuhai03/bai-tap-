@@ -1,29 +1,24 @@
 import java.util.Scanner;
 
-public class AverageOfN {
-    public static void main(String[] args) {
-        int n, sum = 0;
-        double avg;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Nhập vào số lượng số nguyên n: ");
-        n = scanner.nextInt();
-
-        // nhập vào n số nguyên và tính tổng
-        for (int i = 0; i < n; i++) {
-            System.out.print("Nhập vào số nguyên thứ " + (i+1) + ": ");
-            int num = scanner.nextInt();
-            sum += num;
-        }
-
-        // tính trung bình cộng
-        avg = (double) sum / n;
-
-        // in kết quả ra màn hình
-        System.out.println("Trung bình cộng của " + n + " số nguyên đã nhập là: " + avg);
-
-        // đóng đối tượng Scanner
-        scanner.close();
-    }
+public class B8 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n;
+	int A[];
+	do {
+		System.out.println("Nhap vao so phan tu cua mang: ");
+		n=sc.nextInt();
+	}while(n<=0);
+	A=new int [n];
+	for(int i=0;i<A.length;i++) {
+		System.out.println("A["+i+"]=");
+		A[i]=sc.nextInt();
+	}
+	float tong=0,trungbinhcong;
+	for(int i=0;i<A.length;i++) {
+		tong+=A[i];
+	}
+	trungbinhcong=tong/n;
+	System.out.println("Trung binh cong cua cac so vua nhap la: "+trungbinhcong);
+}
 }
